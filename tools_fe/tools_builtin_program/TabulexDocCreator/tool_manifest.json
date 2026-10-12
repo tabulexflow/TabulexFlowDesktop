@@ -1,0 +1,36 @@
+{
+    "tool_ident": "TabulexDocCreator",
+    "tool_title": {
+        "en": "Tabulex Doc Creator",
+        "zh": "灵表文档创建",
+        "fr": "Gestionnaire de documents en lot",
+        "ru": "Массовая обработка документов",
+        "es": "Procesador de documentos por lotes",
+        "ar": "معالج المستندات دفعة واحدة"
+    },
+    "tool_type": "BuiltinProgram",
+    "tool_sort_order": 200,
+    "tool_version": "1.0.0",
+    "tool_description": {
+        "en": "Batch document operations: create/modify Excel/Word/PPT/PDF with placeholder replacement and content insertion",
+        "zh": "文档批量处理：创建/修改Excel/Word/PPT/PDF，支持占位符替换和内容插入",
+        "fr": "Opérations de documents en lot : créer/modifier Excel/Word/PPT/PDF avec remplacement de placeholders et insertion de contenu",
+        "ru": "Пакетная обработка документов: создание/изменение Excel/Word/PPT/PDF с заменой плейсхолдеров и вставкой содержимого",
+        "es": "Operaciones de documentos por lotes: crear/modificar Excel/Word/PPT/PDF con reemplazo de marcadores e inserción de contenido",
+        "ar": "عمليات المستندات دفعة واحدة: إنشاء/تعديل Excel/Word/PPT/PDF مع استبدال العناصر النائبة وإدراج المحتوى"
+    },
+    "tool_is_free": true,
+    "tool_is_open_source": true,
+    "tool_is_local": true,
+    "tool_need_ai": false,
+    "tool_folder_path": "tools_builtin_program/TabulexDocCreator",
+    "tool_need_version": "1.0.0",
+    "tool_dependencies": ["python-docx", "python-pptx", "PyMuPDF", "Pillow", "openpyxl", "xlrd", "oletools"],
+    "tool_window_width": 900,
+    "tool_window_height": 550,
+    "tool_icon_path": "app_icon.ico",
+    "tool_author": "TabulexFlow Team",
+    "tool_license": "AGPL-3.0",
+    "tool_tags": ["document", "batch", "excel", "word", "ppt", "pdf"],
+    "tool_min_frontend_version": "1.0.0"
+}

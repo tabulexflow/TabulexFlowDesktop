@@ -1,0 +1,528 @@
+{
+  "version": "1.0.0",
+  "main_menu": {
+    "file": {
+      "id": "file",
+      "label": {
+        "en": "File",
+        "zh": "文件"
+      },
+      "items": [
+        {
+          "id": "file.refresh_tools",
+          "label": {
+            "en": "Refresh Tools",
+            "zh": "刷新工具"
+          },
+          "shortcut": "F5",
+          "icon": "refresh"
+        },
+        {
+          "id": "file.clear_cache",
+          "label": {
+            "en": "Clear Cache",
+            "zh": "清除缓存"
+          },
+          "icon": "trash"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "file.exit",
+          "label": {
+            "en": "Exit",
+            "zh": "退出"
+          },
+          "shortcut": "Alt+F4",
+          "icon": "exit"
+        }
+      ]
+    },
+    "tools": {
+      "id": "tools",
+      "label": {
+        "en": "Tools",
+        "zh": "工具"
+      },
+      "items": [
+        {
+          "id": "tools.builtin_programs",
+          "label": {
+            "en": "Builtin Programs",
+            "zh": "内置工具"
+          },
+          "icon": "package",
+          "submenu": true
+        },
+        {
+          "id": "tools.remote_programs",
+          "label": {
+            "en": "Remote Programs",
+            "zh": "远程工具"
+          },
+          "icon": "cloud",
+          "submenu": true
+        }
+      ]
+    },
+    "window": {
+      "id": "window",
+      "label": {
+        "en": "Window",
+        "zh": "窗口"
+      },
+      "items": [
+        {
+          "id": "window.home",
+          "label": {
+            "en": "Home",
+            "zh": "主页"
+          },
+          "shortcut": "Ctrl+H",
+          "icon": "home"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "window.minimize",
+          "label": {
+            "en": "Minimize",
+            "zh": "最小化"
+          }
+        },
+        {
+          "id": "window.maximize",
+          "label": {
+            "en": "Maximize",
+            "zh": "最大化"
+          }
+        }
+      ]
+    },
+    "settings": {
+      "id": "settings",
+      "label": {
+        "en": "Settings",
+        "zh": "设置"
+      },
+      "items": [
+        {
+          "id": "settings.language",
+          "label": {
+            "en": "Language",
+            "zh": "语言"
+          },
+          "icon": "globe",
+          "submenu": true
+        },
+        {
+          "id": "settings.theme",
+          "label": {
+            "en": "Theme",
+            "zh": "主题"
+          },
+          "icon": "palette",
+          "submenu": true
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "settings.preferences",
+          "label": {
+            "en": "Preferences",
+            "zh": "偏好设置"
+          },
+          "shortcut": "Ctrl+,",
+          "icon": "settings"
+        }
+      ]
+    },
+    "account": {
+      "id": "account",
+      "label": {
+        "en": "Account",
+        "zh": "账户"
+      },
+      "items": [
+        {
+          "id": "account.login",
+          "label": {
+            "en": "Login / Register",
+            "zh": "登录/注册"
+          },
+          "icon": "login"
+        },
+        {
+          "id": "account.profile",
+          "label": {
+            "en": "My Profile",
+            "zh": "我的资料"
+          },
+          "icon": "user"
+        },
+        {
+          "id": "account.devices",
+          "label": {
+            "en": "My Devices",
+            "zh": "我的设备"
+          },
+          "icon": "computer"
+        },
+        {
+          "id": "account.feedback",
+          "label": {
+            "en": "Feedback",
+            "zh": "问题反馈"
+          },
+          "icon": "chat-heart"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "account.upgrade",
+          "label": {
+            "en": "Upgrade Plan",
+            "zh": "升级套餐"
+          },
+          "icon": "star"
+        },
+        {
+          "id": "account.logout",
+          "label": {
+            "en": "Logout",
+            "zh": "退出登录"
+          },
+          "icon": "logout"
+        }
+      ]
+    },
+    "help": {
+      "id": "help",
+      "label": {
+        "en": "Help",
+        "zh": "帮助"
+      },
+      "items": [
+        {
+          "id": "help.documentation",
+          "label": {
+            "en": "Documentation",
+            "zh": "文档"
+          },
+          "icon": "book"
+        },
+        {
+          "id": "help.tutorials",
+          "label": {
+            "en": "Tutorials",
+            "zh": "教程"
+          },
+          "icon": "video"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "help.check_update",
+          "label": {
+            "en": "Check for Updates",
+            "zh": "检查更新"
+          },
+          "icon": "refresh"
+        },
+        {
+          "id": "help.about",
+          "label": {
+            "en": "About",
+            "zh": "关于"
+          },
+          "shortcut": "F1",
+          "icon": "info"
+        }
+      ]
+    }
+  },
+  "tool_menu_template": {
+    "file": {
+      "id": "file",
+      "label": {
+        "en": "File",
+        "zh": "文件"
+      },
+      "items": [
+        {
+          "id": "file.new",
+          "label": {
+            "en": "New",
+            "zh": "新建"
+          },
+          "shortcut": "Ctrl+N",
+          "icon": "plus"
+        },
+        {
+          "id": "file.open",
+          "label": {
+            "en": "Open",
+            "zh": "打开"
+          },
+          "shortcut": "Ctrl+O",
+          "icon": "folder-open"
+        },
+        {
+          "id": "file.save",
+          "label": {
+            "en": "Save",
+            "zh": "保存"
+          },
+          "shortcut": "Ctrl+S",
+          "icon": "save"
+        },
+        {
+          "id": "file.save_as",
+          "label": {
+            "en": "Save As...",
+            "zh": "另存为..."
+          },
+          "shortcut": "Ctrl+Shift+S",
+          "icon": "save"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "file.export",
+          "label": {
+            "en": "Export",
+            "zh": "导出"
+          },
+          "icon": "export",
+          "submenu": true
+        },
+        {
+          "id": "file.print",
+          "label": {
+            "en": "Print",
+            "zh": "打印"
+          },
+          "shortcut": "Ctrl+P",
+          "icon": "printer"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "file.recent_files",
+          "label": {
+            "en": "Recent Files",
+            "zh": "最近文件"
+          },
+          "icon": "clock",
+          "submenu": true
+        }
+      ]
+    },
+    "edit": {
+      "id": "edit",
+      "label": {
+        "en": "Edit",
+        "zh": "编辑"
+      },
+      "items": [
+        {
+          "id": "edit.undo",
+          "label": {
+            "en": "Undo",
+            "zh": "撤销"
+          },
+          "shortcut": "Ctrl+Z",
+          "icon": "undo"
+        },
+        {
+          "id": "edit.redo",
+          "label": {
+            "en": "Redo",
+            "zh": "重做"
+          },
+          "shortcut": "Ctrl+Y",
+          "icon": "redo"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "edit.cut",
+          "label": {
+            "en": "Cut",
+            "zh": "剪切"
+          },
+          "shortcut": "Ctrl+X",
+          "icon": "scissors"
+        },
+        {
+          "id": "edit.copy",
+          "label": {
+            "en": "Copy",
+            "zh": "复制"
+          },
+          "shortcut": "Ctrl+C",
+          "icon": "copy"
+        },
+        {
+          "id": "edit.paste",
+          "label": {
+            "en": "Paste",
+            "zh": "粘贴"
+          },
+          "shortcut": "Ctrl+V",
+          "icon": "clipboard"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "edit.select_all",
+          "label": {
+            "en": "Select All",
+            "zh": "全选"
+          },
+          "shortcut": "Ctrl+A",
+          "icon": "select-all"
+        },
+        {
+          "id": "edit.find",
+          "label": {
+            "en": "Find",
+            "zh": "查找"
+          },
+          "shortcut": "Ctrl+F",
+          "icon": "search"
+        },
+        {
+          "id": "edit.replace",
+          "label": {
+            "en": "Replace",
+            "zh": "替换"
+          },
+          "shortcut": "Ctrl+H",
+          "icon": "replace"
+        }
+      ]
+    },
+    "view": {
+      "id": "view",
+      "label": {
+        "en": "View",
+        "zh": "视图"
+      },
+      "items": [
+        {
+          "id": "view.zoom_in",
+          "label": {
+            "en": "Zoom In",
+            "zh": "放大"
+          },
+          "shortcut": "Ctrl++",
+          "icon": "zoom-in"
+        },
+        {
+          "id": "view.zoom_out",
+          "label": {
+            "en": "Zoom Out",
+            "zh": "缩小"
+          },
+          "shortcut": "Ctrl+-",
+          "icon": "zoom-out"
+        },
+        {
+          "id": "view.reset_zoom",
+          "label": {
+            "en": "Reset Zoom",
+            "zh": "重置缩放"
+          },
+          "shortcut": "Ctrl+0",
+          "icon": "zoom-reset"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "view.fullscreen",
+          "label": {
+            "en": "Fullscreen",
+            "zh": "全屏"
+          },
+          "shortcut": "F11",
+          "icon": "fullscreen"
+        },
+        {
+          "id": "view.statusbar",
+          "label": {
+            "en": "Status Bar",
+            "zh": "状态栏"
+          },
+          "icon": "toggle",
+          "checkable": true,
+          "checked": true
+        }
+      ]
+    },
+    "tools": {
+      "id": "tools",
+      "label": {
+        "en": "Tools",
+        "zh": "工具"
+      },
+      "items": [
+        {
+          "id": "tools.options",
+          "label": {
+            "en": "Options",
+            "zh": "选项"
+          },
+          "icon": "settings"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "tools.customize",
+          "label": {
+            "en": "Customize Toolbar",
+            "zh": "自定义工具栏"
+          },
+          "icon": "wrench"
+        }
+      ]
+    },
+    "help": {
+      "id": "help",
+      "label": {
+        "en": "Help",
+        "zh": "帮助"
+      },
+      "items": [
+        {
+          "id": "help.tool_help",
+          "label": {
+            "en": "Tool Help",
+            "zh": "工具帮助"
+          },
+          "shortcut": "F1",
+          "icon": "question-circle"
+        },
+        {
+          "id": "tool.report_issue",
+          "label": {
+            "en": "Report Issue",
+            "zh": "反馈问题"
+          },
+          "icon": "flag"
+        }
+      ]
+    }
+  }
+}

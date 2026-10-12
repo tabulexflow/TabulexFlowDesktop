@@ -1,0 +1,149 @@
+# TabulexFlowDesktop 前端工程 .gitignore
+
+# Python 编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境目录
+venv/
+.venv/
+env/
+venv_*/
+
+# 日志文件
+logs/
+*.log
+*.log.gz
+
+# 环境变量文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.flaskenv
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# IDE 文件
+.idea/
+.vscode/
+.vs/
+.trae/
+*.iml
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# 测试覆盖率
+.coverage
+coverage.xml
+*.cover
+.cov_*
+.cache
+htmlcov/
+.pytest_cache/
+
+# 性能分析
+*.prof
+
+# 构建输出
+build/
+dist/
+
+# PyInstaller 构建产物（但保留 config/build.spec 源码配置）
+*.spec
+!config/build.spec
+
+# 运行时下载的工具目录（从后端下载，不应入库）
+tools_fe/tools_local_program/
+tools_fe/tools_remote_program/
+tools_fe/tools_remote_webpage/
+# 本地 exe 完整性清单（H-3 运行时生成，含本地 EXE 哈希，不应入库）
+tools_fe/.tfp_manifests/
+
+# 运行时生成的配置文件（用户本地设置，不应入库）
+config/settings.json
+config/tool_list_frontend.json
+config/backend_config.json
+
+# 安全敏感文件（认证 Token，绝不应入库）
+.license
+.auth_token
+
+# 构建目标标记（由 tfpdesktop_build.bat 自动生成，不应入库）
+_build_target.py
+
+# 用户设置目录（运行时生成，每个用户独立）
+user_setting/
+
+# 临时文件和目录
+temp/
+test_temp/
+*.tmp
+*.temp
+
+# 备份文件
+*.bak
+
+# Office 文档（测试产生的文件不应入库）
+*.xls
+*.xlsx
+*.xlsm
+*.csv
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.pdf
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+*.db3
+
+# 数据目录（运行时生成的敏感数据，不应入库）
+data/
+
+# 证书和密钥
+*.pem
+*.key
+*.crt
+*.csr
+
+# 打包输出文件
+*.zip
+*.tar.gz
+*.pkg
+*.deb
+*.rpm
+*.AppImage
+
+# 大文件
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IPC 临时文件
+bom_tree.json
+bom_result.json
+
+# Docker 相关
+docker-compose.override.yml
+.env.production
+.env.staging
+
+# 密钥管理
+secrets.yml
+credentials.json
+
+# 测试文件目录
+02_Test_Files/
+*_Todo.md

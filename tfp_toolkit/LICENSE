@@ -1,0 +1,101 @@
+Dual License for TabulexFlow Toolkit SDK
+
+Copyright (C) 2024-present TabulexFlow Team
+
+========================================================================
+Option 1: GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later)
+========================================================================
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+========================================================================
+Option 2: TabulexFlow Commercial License (LicenseRef-TabulexFlow-Commercial)
+========================================================================
+
+This SDK may be used, modified, and distributed under the
+TabulexFlow Commercial License for the following purpose:
+
+- Use by closed-source RemoteProgram tools within the TabulexFlow
+  ecosystem, which are distributed as standalone executables and communicate
+  with the main program via IPC (Inter-Process Communication).
+
+Under this commercial license:
+- The AGPL v3 copyleft requirement does NOT apply to the closed-source
+  RemoteProgram tool that uses this SDK.
+- The closed-source tool is NOT required to open-source its code.
+- The SDK itself remains under the dual license and any modifications
+  to the SDK must be contributed back or licensed separately.
+
+For commercial licensing inquiries, please contact the TabulexFlow Team.
+
+========================================================================
+Summary
+========================================================================
+
+- For open-source BuiltinProgram tools: Use under AGPL v3.
+- For closed-source RemoteProgram tools: Use under the TabulexFlow
+  Commercial License. The AGPL v3 copyleft does not propagate to your
+  closed-source tool code.
+
+========================================================================
+Clarification / 补充说明
+========================================================================
+
+Option 2 (the TabulexFlow Commercial License) is offered by the
+TabulexFlow Team only to licensees who are authorized to build
+closed-source commercial tools within the TabulexFlow ecosystem.
+Unless you have received a written commercial license grant from the
+TabulexFlow Team, your use of this SDK is governed by Option 1
+(AGPL-3.0-or-later).
+
+选项 2（TabulexFlow 商业许可）仅由 TabulexFlow Team 向已获授权在
+TabulexFlow 生态内开发闭源商业工具的许可方授予。若您未获得
+TabulexFlow Team 的书面商业授权，则对本 SDK 的使用适用选项 1
+（AGPL-3.0-or-later）。
+
+========================================================================
+Maintainer Note / 维护者须知（非许可条款 / NOT license terms）
+========================================================================
+
+The sections below are project-internal guidance for maintainers and
+contributors who modify or extend this dual-licensed SDK directory. They
+are NOT additional license terms for recipients of the SDK. Each source
+file in this directory carries a short pointer to this section.
+
+以下内容是面向维护者与贡献者的项目内部开发规范，用于约束对本双许可 SDK
+目录的修改与扩展；它们不是对 SDK 使用者的额外许可条款。本目录每个源文件
+头部的简短警示均指向本节。
+
+1) Commercial use of this SDK / 本 SDK 的商业使用
+
+   Files in this directory are dual-licensed. Closed-source commercial tools
+   (e.g. RemoteProgram tools) that are licensed by the TabulexFlow Team
+   may use and bundle this SDK under the TabulexFlow Commercial License;
+   the AGPL v3 copyleft does NOT apply to them, and the closed-source tool is
+   NOT required to open source its code.
+
+   本目录下的 SDK 文件按双许可发布。经 TabulexFlow Team 商业授权的闭源
+   商业工具（如 RemoteProgram 工具）可按 TabulexFlow 商业许可使用并打包
+   本 SDK；AGPL v3 传染性条款不对其适用，闭源工具无需因此开源其代码。
+
+2) Dependency red line / 依赖红线
+
+   Files in this directory (and any code that imports them) must NOT import
+   copyleft-only open-source libraries that are exclusively licensed under
+   GPL/AGPL (e.g. mutagen, PyMuPDF). Importing such libraries would make the
+   closed-source commercial license option invalid.
+
+   本目录下的文件（及引入本文件的代码）不得 import 仅以 GPL/AGPL 授权的
+   copyleft-only 开源库（如 mutagen、PyMuPDF）；引入此类库将导致闭源商业
+   许可选项失效。

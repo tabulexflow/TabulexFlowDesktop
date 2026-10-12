@@ -1,0 +1,14 @@
+# Linux 构建环境专用依赖（仅 Linux 打包使用，Windows 构建不要安装此文件）
+#
+# 用途：RemoteWebpage Linux 回退 WebView 引擎
+#  - pywebview：跨平台 WebView 封装，GTK 后端通过 PyGObject 调用系统 WebKitGTK
+#    （pywebview>=5.1 起自动探测 WebKit2 4.1/4.0，适配 Ubuntu 24.04）
+#  - PyGObject（gi）：由 Linux 系统包提供，通常无需 pip 安装：
+#       apt:  sudo apt install python3-gi gir1.2-webkit2-4.1 libwebkit2gtk-4.1-0
+#       conda: conda install -n py312tf pygobject
+#
+# 注意：wx 由系统 apt 提供（python3-wxgtk4.0），勿用 pip 装
+# （Linux 无官方预编译轮子，pip 会触发源码编译；requirements.txt 的
+#  wxPython 钉版仅适用于 Windows/conda 构建环境）。
+pywebview>=5.1
+

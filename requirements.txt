@@ -1,0 +1,46 @@
+# Python version is 3.12
+# 注意：不要将以下两个依赖改回 `>=` 开放范围（合规性要求）：
+# 开放范围会导致未来 pip install -U 后实际打包内容与 docs/NOTICE.txt 声明漂移，
+# 造成"未披露新引入依赖项"的合规漏洞（cryptography 未来版本可能捆绑新组件）。
+# 升级版本时需同步：1) 更新此处与 docs/NOTICE.txt 版本号；2) 在构建机运行
+#   pip install pip-tools && pip-compile requirements.txt -o requirements.lock.txt
+#   生成锁定文件供发布构建使用。
+requests==2.33.0
+urllib3~=2.7.0
+wxPython==4.3.1
+pyinstaller==6.22.2
+openpyxl==3.1.5
+xlrd==2.0.2
+keyring==25.7.0
+cryptography~=50.0.1
+pytest==9.0.3
+oletools==0.60.2
+# TabulexDocCreator FRONT dependencies
+# 注意：python-docx/python-pptx/PyMuPDF(fitz)/Pillow 会经 config/build.spec
+# 的 hiddenimports 打包进二进制（TabulexDocCreator 工具代码本身为 datas 明文 + importlib
+# 动态加载，见 build.spec "BuiltinProgram 打包模型" 注释），运行时**不会**自动 pip 安装。
+# numpy 已被 build.spec 明确排除（唯一引用在 tdc_PDFWorker._detect_frame_opencv，
+# 被 import cv2 门控且 cv2 未安装，运行时不可达），仅作开发环境依赖保留。
+python-docx==1.2.0
+python-pptx==1.0.2
+PyMuPDF==1.28.2
+Pillow==10.2.0
+# TabulexFileOperator FRONT dependencies
+Send2Trash==2.1.0
+regex==2026.7.19
+mutagen==1.46.0
+# TabulexFileOperator 解压支持（7z 格式，纯 Python，无需系统 7-Zip；LGPL-2.1）
+py7zr==1.1.3
+# TabulexDocCreator dependencies (tdc_PDFWorker uses numpy, dev-only; excluded from bundle)
+numpy==2.5.2
+# License compliance audit tool (development-time only). It is NOT bundled
+# into the binary by config/build.spec and is NOT shipped to end users; it is
+# disclosed as a development-only entry in docs/NOTICE.txt. If it ever becomes
+# a runtime dependency, it MUST be moved to the runtime section there. License: MIT.
+licensecheck==2026.0.8
+
+# ===========================================
+# 说明
+# ===========================================
+# 1. 此文件用于项目核心依赖安装
+# 2. 安装命令: pip install -r requirements.txt

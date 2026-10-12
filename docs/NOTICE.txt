@@ -1,0 +1,237 @@
+TabulexFlow - Third-Party Notices
+=======================================
+
+This file lists the third-party dependencies used by the TabulexFlow
+frontend (TabulexFlowDesktop) and BuiltinProgram tools, along with their respective
+licenses.
+
+This project is licensed under the GNU Affero General Public License v3.0
+(AGPL-3.0). See LICENSE.txt for the full license text.
+
+
+Core Dependencies
+-----------------
+
+requests (2.33.0) - Apache License 2.0
+  https://github.com/psf/requests
+
+urllib3 (2.7.0) - MIT License
+  https://github.com/urllib3/urllib3
+
+wxPython (4.3.1) - wxWindows Library Licence
+  https://github.com/wxWidgets/Phoenix
+
+pyinstaller (6.22.2) - GPL with Bootloader Exception
+  https://github.com/pyinstaller/pyinstaller
+
+openpyxl (3.1.5) - MIT License
+  https://pypi.org/project/openpyxl/   (project releases and docs)
+  https://foss.heptapod.net/openpyxl/openpyxl   (source repository)
+
+xlrd (2.0.2) - BSD License
+  https://github.com/python-excel/xlrd
+
+keyring (25.7.0) - MIT License
+  https://github.com/jaraco/keyring
+
+cryptography (50.0.1) - Apache License 2.0
+  https://github.com/pyca/cryptography
+
+oletools (0.60.2) - MIT License
+  https://github.com/decalage2/oletools
+
+pytest (9.0.3) - MIT License
+  (development-time test dependency only; NOT bundled into the shipped
+   binary distributions by config/build.spec)
+  https://github.com/pytest-dev/pytest
+
+numpy (2.5.2) - BSD 3-Clause License
+  (development-time only; excluded from the shipped binary distributions by
+   config/build.spec and not loaded at runtime)
+  https://github.com/numpy/numpy
+
+licensecheck (2026.0.8) - MIT License
+  (development-time license-compliance audit tool only; NOT bundled into the
+   shipped binary distributions and not shipped to end users)
+  https://pypi.org/project/licensecheck/
+
+
+TabulexDocCreator Dependencies
+----------------------------
+
+python-docx (1.2.0) - MIT License
+  https://github.com/python-openxml/python-docx
+
+python-pptx (1.0.2) - MIT License
+  https://github.com/scanny/python-pptx
+
+PyMuPDF (1.28.2) - GNU Affero General Public License v3.0 (AGPL-3.0)
+  https://github.com/pymupdf/PyMuPDF
+
+Pillow (10.2.0) - MIT-CMU License
+  https://github.com/python-pillow/Pillow
+
+
+TabulexFileOperator Dependencies
+----------------------------
+
+Send2Trash (2.1.0) - BSD License
+  https://github.com/arsenetar/send2trash
+
+regex (2026.7.19) - Apache License 2.0
+  https://github.com/mrabarnett/mrab-regex
+
+mutagen (1.46.0) - GNU General Public License v2.0 or later (GPL-2.0-or-later)
+  https://github.com/quodlibet/mutagen
+
+py7zr (1.1.3) - GNU Lesser General Public License v2.1 or later (LGPL-2.1-or-later)
+  7-Zip archive extraction (pure Python). Bundles its transitive deps
+  (pycryptodomex / pyppmd / pybcj / multivolumefile / texttable /
+   backports.zstd / brotli / inflate64).
+  https://github.com/miurahr/py7zr
+
+
+Core Indirect Dependencies
+---------------------------
+
+charset_normalizer (>=3.0.0) - MIT License (indirect dependency of requests)
+  https://github.com/Ousret/charset_normalizer
+
+
+Indirect Python Dependencies (bundled with binary distributions)
+-----------------------------------------------------------------
+
+The following Python packages are indirect (transitive) dependencies that
+are bundled into our binary distributions (PyInstaller / Nuitka outputs):
+
+certifi - Mozilla Public License 2.0 (MPL-2.0)
+  (indirect dependency of requests, provides the CA certificate bundle;
+   used unmodified, no source modifications -> file-level copyleft of
+   MPL-2.0 is not triggered)
+  https://github.com/certifi/python-certifi
+
+lxml - BSD 3-Clause License
+  (indirect dependency of python-docx)
+  https://github.com/lxml/lxml
+
+bcrypt - Apache License 2.0
+  (indirect dependency of cryptography, pulled in by its
+   SSH key serialization submodule)
+  https://github.com/pyca/bcrypt
+
+cffi - MIT License (indirect dependency of cryptography)
+  https://cffi.readthedocs.io/
+
+pycparser - BSD 3-Clause License (indirect dependency of cffi)
+  https://github.com/eliben/pycparser
+
+Compatibility note (wxPython): wxPython is distributed under the wxWindows
+Library Licence, an OSI-approved permissive license that is compatible with
+this project's AGPL-3.0 licensing. (The bundled binary pins the version listed
+under Core Dependencies; Linux builds use the distribution's system wx package.)
+
+
+C Runtime Libraries (bundled with binary distributions)
+--------------------------------------------------------
+
+Our binary distributions (the PyInstaller frontend binary and the Nuitka
+packaged remote tools) bundle the following C runtime libraries. Linking
+is dynamic (the .so files sit next to the executable and can be replaced
+by the user), except where noted:
+
+libssl.so.3 + libcrypto.so.3 (OpenSSL) - Apache License 2.0
+  This product includes software developed by the OpenSSL Project for use
+  in the OpenSSL Toolkit. (http://www.openssl.org/)
+  This product includes cryptographic software written by Eric Young
+  (eay@cryptsoft.com).
+  This product includes software written by Tim Hudson (tjh@cryptsoft.com).
+  https://www.openssl.org/source/
+
+libffi.so.8 - MIT License
+  https://github.com/libffi/libffi
+
+libexpat.so.1 - MIT License
+  https://github.com/libexpat/libexpat
+
+libbz2.so.1.0 - BSD License (bzip2)
+  https://sourceware.org/bzip2/
+
+liblzma.so.5 - 0BSD License (XZ Utils)
+  https://tukaani.org/xz/
+
+libz.so.1 (zlib) - zlib License
+  https://zlib.net/
+
+libxml2.so.2 - MIT License
+  https://gitlab.gnome.org/GNOME/libxml2
+
+libxslt.so.1 + libexslt.so.0 - MIT License
+  https://gitlab.gnome.org/GNOME/libxslt
+
+libicudata.so.74 + libicuuc.so.74 (ICU) - Unicode License Agreement (Unicode-3.0)
+  The full ICU license text is available at:
+  https://www.unicode.org/license.txt
+
+libscipy_openblas64_*.so (OpenBLAS) - BSD 3-Clause License
+  https://github.com/OpenMathLib/OpenBLAS
+
+libgfortran-*.so + libquadmath-*.so + libgcc_s.so.1 (GCC runtime)
+  - GPL-2.0-or-later WITH GCC Runtime Library Exception 3.1
+  These libraries are covered by the GCC Runtime Library Exception, which
+  permits linking them into non-GPL programs without infecting the rest
+  of the work:
+  https://www.gnu.org/licenses/gcc-exception-3.1.html
+
+libgpg-error.so.0 + libgcrypt.so.20 (GnuPG) - LGPL-2.1-or-later
+  Linking is dynamic (or, when present, the libraries are conveyed as
+  unmodified separate .so files that can be replaced by the user).
+  Source code: https://gnupg.org/software/libgcrypt/
+               https://gnupg.org/software/libgpg-error/
+
+Note: The lists above were confirmed by actually scanning the build artifact
+directories at build time; artifacts for different target platforms
+(Windows/Linux) may contain only a subset of them. The authoritative full
+list is the SHA256SUMS.txt shipped with each release and the build log in the
+release notes.
+
+
+Application Image Assets
+------------------------
+
+The application icons bundled with this project:
+
+  app_icon.ico
+  config/default_icon.ico
+  tools_fe/tools_builtin_program/TabulexDocCreator/app_icon.ico
+  tools_fe/tools_builtin_program/TabulexFileOperator/app_icon.ico
+
+are original works created by the TabulexFlow Team and are distributed under
+the same license as the project (AGPL-3.0-or-later). They are not derived
+from any third-party icon set.
+
+
+Full License Texts
+-------------------
+
+The complete text of each license referenced above can be obtained from
+the following canonical URLs:
+
+  AGPL-3.0:              https://www.gnu.org/licenses/agpl-3.0.txt
+  Apache-2.0:            https://www.apache.org/licenses/LICENSE-2.0.txt
+  BSD 3-Clause:          https://opensource.org/licenses/BSD-3-Clause
+  BSD 2-Clause:          https://opensource.org/licenses/BSD-2-Clause
+  0BSD:                  https://opensource.org/licenses/0BSD
+  MIT:                   https://opensource.org/licenses/MIT
+  MIT-CMU (Pillow):      https://github.com/python-pillow/Pillow/blob/main/LICENSE
+  MPL-2.0 (certifi):     https://www.mozilla.org/en-US/MPL/2.0/
+  zlib:                  https://zlib.net/zlib_license.html
+  wxWindows Library Licence:
+                         https://opensource.org/licenses/WXwindows
+  Unicode-3.0 (ICU):     https://www.unicode.org/license.txt
+  GPL-2.0-or-later with GCC Runtime Library Exception 3.1:
+                         https://www.gnu.org/licenses/gcc-exception-3.1.html
+  LGPL-2.1-or-later:     https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
+  GPL-2.0-or-later (mutagen, upgradeable to AGPL-3.0):
+                         https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+  PyInstaller Bootloader Exception:
+                         https://github.com/pyinstaller/pyinstaller/blob/develop/COPYING.txt

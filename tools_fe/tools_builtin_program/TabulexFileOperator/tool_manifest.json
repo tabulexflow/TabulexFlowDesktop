@@ -1,0 +1,36 @@
+{
+    "tool_ident": "TabulexFileOperator",
+    "tool_title": {
+        "en": "Tabulex File Operator",
+        "zh": "灵表文件处理",
+        "fr": "Gestionnaire de fichiers en lot",
+        "ru": "Массовая обработка файлов",
+        "es": "Procesador de archivos por lotes",
+        "ar": "معالج الملفات دفعة واحدة"
+    },
+    "tool_type": "BuiltinProgram",
+    "tool_sort_order": 100,
+    "tool_version": "1.0.0",
+    "tool_description": {
+        "en": "Batch file operations: search/rename/move/copy/compress/duplicate check - all in one!",
+        "zh": "文件批量处理：搜索/改名/移动/复制/压缩/查重，一键全搞定！",
+        "fr": "Opérations de fichiers en lot : rechercher/renommer/déplacer/copier/compresser/vérifier les doublons - tout en un !",
+        "ru": "Пакетная обработка файлов: поиск/переименование/перемещение/копирование/сжатие/проверка дубликатов - всё в одном!",
+        "es": "Operaciones de archivos por lotes: buscar/renombrar/mover/copiar/comprimir/verificar duplicados - ¡todo en uno!",
+        "ar": "عمليات الملفات دفعة واحدة: بحث/إعادة تسمية/نقل/نسخ/ضغط/التحقق من التكرار - كل شيء في واحد!"
+    },
+    "tool_is_free": true,
+    "tool_is_open_source": true,
+    "tool_is_local": true,
+    "tool_need_ai": false,
+    "tool_folder_path": "tools_builtin_program/TabulexFileOperator",
+    "tool_need_version": "1.0.0",
+    "tool_dependencies": ["openpyxl", "mutagen", "py7zr", "Send2Trash", "regex"],
+    "tool_window_width": 1000,
+    "tool_window_height": 600,
+    "tool_icon_path": "app_icon.ico",
+    "tool_author": "TabulexFlow Team",
+    "tool_license": "AGPL-3.0",
+    "tool_tags": ["file", "batch", "rename", "copy", "move", "compress"],
+    "tool_min_frontend_version": "1.0.0"
+}
